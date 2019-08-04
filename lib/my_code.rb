@@ -1,4 +1,4 @@
-# Your Code Here
+# My generalized Map
 def map(source_array)
   new = []
   i = 0
@@ -9,11 +9,15 @@ def map(source_array)
   return new
 end
 
-def reduce(source_array, memo=0)
+# My generalized Reduce
+def reduce(source_array, starting_point=0)
   i = 0
+  memo = starting_point
+  
   while i < source_array.length do
     memo += yield(source_array[i]) # <== Unique work
     i += 1
   end
+  
   return memo
 end
