@@ -15,6 +15,7 @@ def reduce(source_array, starting_point=0)
   memo = starting_point
   
   while i < source_array.length do
+    if yield(source_array[i]).is_an(Integer)
     memo += yield(source_array[i]) # <== Unique work
     i += 1
   end
