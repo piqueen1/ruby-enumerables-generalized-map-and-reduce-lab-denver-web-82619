@@ -11,7 +11,7 @@ end
 
 # My generalized Reduce
 def reduce(source_array, starting_point=source_array[0])
-  i = 0
+  i = 1
   result = starting_point
   
   while i < source_array.length do
