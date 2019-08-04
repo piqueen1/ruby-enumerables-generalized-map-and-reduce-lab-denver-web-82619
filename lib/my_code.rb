@@ -17,14 +17,6 @@ def reduce(source_array, starting_point=0)
   while i < source_array.length do
     if yield(source_array[i]).is_a?(Integer)
       result += yield(source_array[i])
-    else
-      if yield(source_array[i]) == true
-        result = true
-      end
-    else
-      if yield(source_array[i]) == true
-        result = false  
-      end
     end
     
     i += 1
