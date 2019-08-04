@@ -12,17 +12,21 @@ end
 # My generalized Reduce
 def reduce(source_array, starting_point=0)
   i = 0
-  memo = starting_point
+  result = starting_point
   
   while i < source_array.length do
     if yield(source_array[i]).is_a?(Integer)
-      memo += yield(source_array[i])
+      result += yield(source_array[i])
     else
       if yield(source_array[i]) == true
+        result = true
+    else
+      if yield(source_array[i]) == true
+        result = false  
     end
     
     i += 1
   end
   
-  return memo
+  return result
 end
