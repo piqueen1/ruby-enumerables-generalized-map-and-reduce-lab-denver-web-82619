@@ -10,7 +10,8 @@ def map(source_array)
 end
 
 # My generalized Reduce
-def reduce(source_array, starting_point=source_array[0])
+def reduce(source_array, starting_point=0)
+  
   i = 1
   result = starting_point
   
