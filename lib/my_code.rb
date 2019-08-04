@@ -1,14 +1,19 @@
 # Your Code Here
-def map_to_no_change(source_array)
+def map(source_array)
   new = []
   i = 0
   while i < source_array.length do
-    new.push( source_array[i] ) # <== Unique work
+    new.push(yield(source_array[i])) # <== Unique work
     i += 1
   end
   return new
 end
 
-def map(source_array)
-
+def reduce(source_array, memo=0)
+  i = 0
+  while i < source_array.length do
+    memo += yield(source_array[i]) # <== Unique work
+    i += 1
+  end
+  return memo
 end
