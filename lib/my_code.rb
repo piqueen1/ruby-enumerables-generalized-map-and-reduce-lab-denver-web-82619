@@ -20,9 +20,11 @@ def reduce(source_array, starting_point=0)
     else
       if yield(source_array[i]) == true
         result = true
+      end
     else
       if yield(source_array[i]) == true
         result = false  
+      end
     end
     
     i += 1
